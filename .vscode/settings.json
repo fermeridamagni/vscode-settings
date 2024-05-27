@@ -1,0 +1,50 @@
+{
+  //  TODO: VSCODE
+  "workbench.iconTheme": "material-icon-theme", // For Material Icon Theme, install the Material Icon Theme extension
+  "workbench.colorTheme": "GitHub Dark", // For GitHub Dark, install the GitHub Theme extension
+  "workbench.productIconTheme": "fluent-icons", // For Fluent Icons, install the Fluent Icons extension
+  "workbench.editorAssociations": {
+    "*.png": "cweijan.imageViewer",
+    "*.ico": "cweijan.imageViewer",
+    "*.md": "cweijan.markdownViewer",
+    "{git,gitlens}:/**/*.{md,csv}": "default"
+  }, // This will open .md files in the Markdown Preview and .csv files in the default editor
+
+  //  TODO: TERMINAL
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.fontFamily": "Hack Nerd Font", // Install Hack Nerd Font from https://www.nerdfonts.com/font-downloads
+
+  // TODO: EDITOR
+  "editor.fontFamily": "Hack Nerd Font", // Install Hack Nerd Font from https://www.nerdfonts.com/font-downloads
+  "editor.tabSize": 2,
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "expand",
+  "editor.renderWhitespace": "all",
+  "vscode-office.editorTheme": "Auto",
+  "vscode-office.openOutline": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": true,
+  "editor.wordWrap": "on",
+  "editor.accessibilitySupport": "off",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+
+  // TODO: GIT
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+
+  // TODO: GITHUB COPILOT
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+
+  // Import Updates on File Move Settings
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always"
+}
