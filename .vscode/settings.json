@@ -1,22 +1,39 @@
 {
   //  TODO: VSCODE
-  "workbench.iconTheme": "material-icon-theme", // For Material Icon Theme, install the Material Icon Theme extension
-  "workbench.colorTheme": "GitHub Dark", // For GitHub Dark, install the GitHub Theme extension
-  "workbench.productIconTheme": "fluent-icons", // For Fluent Icons, install the Fluent Icons extension
+  "workbench.iconTheme": "symbols",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.productIconTheme": "fluent-icons",
   "workbench.editorAssociations": {
     "*.png": "cweijan.imageViewer",
     "*.ico": "cweijan.imageViewer",
     "*.md": "cweijan.markdownViewer",
-    "{git,gitlens}:/**/*.{md,csv}": "default"
-  }, // This will open .md files in the Markdown Preview and .csv files in the default editor
+    "{git,gitlens}:/**/*.{md,csv}": "default",
+    "{git,gitlens}:/**/*.{md,csv,svg}": "default"
+  },
+  // Change the labels of the editor tabs
+  "workbench.editor.customLabels.patterns": {
+    "**/types/**": "${filename} - Types",
+    "**/components/**": "${filename} - Components",
+    "**/pages/**": "${filename} - Pages",
+    "**/styles/**": "${filename} - Styles",
+    "**/utils/**": "${filename} - Utils",
+    "**/services/**": "${filename} - Services",
+    "**/hooks/**": "${filename} - Hooks",
+    "**/contexts/**": "${filename} - Context",
+    "**/assets/**": "${filename} - Assets",
+    "**/public/**": "${filename} - Public",
+    "**/config/**": "${filename} - Config",
+    "**/constants/**": "${filename} - Constants",
+    "**/handlers/**": "${filename} - Handlers"
+  },
 
   //  TODO: TERMINAL
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.env.windows": {},
-  "terminal.integrated.fontFamily": "Hack Nerd Font", // Install Hack Nerd Font from https://www.nerdfonts.com/font-downloads
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
 
   // TODO: EDITOR
-  "editor.fontFamily": "Hack Nerd Font", // Install Hack Nerd Font from https://www.nerdfonts.com/font-downloads
+  "editor.fontFamily": "Hack Nerd Font",
   "editor.tabSize": 2,
   "editor.cursorStyle": "line",
   "editor.cursorBlinking": "expand",
@@ -46,5 +63,36 @@
 
   // Import Updates on File Move Settings
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // TODO: FORMATTING
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "console-ninja.featureSet": "Community",
+  "security.workspace.trust.untrustedFiles": "open",
+  "arduino.useArduinoCli": true,
+  "symbols.hidesExplorerArrows": false
 }
