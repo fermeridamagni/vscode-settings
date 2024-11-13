@@ -12,12 +12,12 @@
   },
   // Change the labels of the editor tabs
   "workbench.editor.customLabels.patterns": {
-    "**/types/**": "${filename} - Types",
+    "**/types/**": "${filename} - Types & Interfaces",
     "**/components/**": "${filename} - Components",
     "**/pages/**": "${filename} - Pages",
     "**/styles/**": "${filename} - Styles",
     "**/utils/**": "${filename} - Utils",
-    "**/services/**": "${filename} - Services",
+    "**/services/**": "${filename} - Services ",
     "**/hooks/**": "${filename} - Hooks",
     "**/contexts/**": "${filename} - Context",
     "**/assets/**": "${filename} - Assets",
@@ -91,8 +91,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "console-ninja.featureSet": "Community",
   "security.workspace.trust.untrustedFiles": "open",
-  "arduino.useArduinoCli": true,
-  "symbols.hidesExplorerArrows": false
+  "database-client.autoSync": true
 }
