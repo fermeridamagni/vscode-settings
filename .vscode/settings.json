@@ -1,12 +1,12 @@
 {
-  //  TODO: VSCODE
+  // * Workbench
   "workbench.iconTheme": "symbols",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.editorAssociations": {
-    "*.png": "cweijan.imageViewer",
-    "*.ico": "cweijan.imageViewer",
-    "*.md": "cweijan.markdownViewer",
+    // "*.png": "cweijan.imageViewer",
+    // "*.ico": "cweijan.imageViewer",
+    // "*.md": "cweijan.markdownViewer",
     "{git,gitlens}:/**/*.{md,csv}": "default",
     "{git,gitlens}:/**/*.{md,csv,svg}": "default"
   },
@@ -27,19 +27,12 @@
     "**/handlers/**": "${filename} - Handlers"
   },
 
-  //  TODO: TERMINAL
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.env.windows": {},
-  "terminal.integrated.fontFamily": "Hack Nerd Font",
-
-  // TODO: EDITOR
+  // * Editor
   "editor.fontFamily": "Hack Nerd Font",
   "editor.tabSize": 2,
   "editor.cursorStyle": "line",
   "editor.cursorBlinking": "expand",
   "editor.renderWhitespace": "all",
-  "vscode-office.editorTheme": "Auto",
-  "vscode-office.openOutline": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.guides.bracketPairs": true,
   "editor.wordWrap": "on",
@@ -47,12 +40,23 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
 
-  // TODO: GIT
+  // * Security
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // * Files
+  "explorer.confirmDelete": false,
+
+  // * TERMINAL
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+
+  // * GIT
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
 
-  // TODO: GITHUB COPILOT
+  // * Copilot
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "*": true,
@@ -65,7 +69,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
 
-  // TODO: FORMATTING
+  // * Formatting (Prettier)
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -91,6 +95,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "security.workspace.trust.untrustedFiles": "open",
+  // * Extensions
+  "vscode-office.editorTheme": "Auto",
+  "vscode-office.openOutline": false,
+
   "database-client.autoSync": true
 }
