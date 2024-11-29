@@ -96,8 +96,6 @@
   },
 
   // * Extensions
-  "vscode-office.editorTheme": "Auto",
-  "vscode-office.openOutline": false,
 
   "database-client.autoSync": true
 }
