@@ -1,0 +1,140 @@
+{
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "symbols",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.editorAssociations": {
+    "{git,gitlens}:/**/*.{md,csv}": "default",
+    "{git,gitlens}:/**/*.{md,csv,svg}": "default"
+  },
+  // Custom Labels
+  "workbench.editor.customLabels.patterns": {
+    "**/types/**": "${filename} - Types & Interfaces",
+    "**/components/**": "${filename} - Components",
+    "**/pages/**": "${filename} - Pages",
+    "**/styles/**": "${filename} - Styles",
+    "**/utils/**": "${filename} - Utils",
+    "**/services/**": "${filename} - Services ",
+    "**/hooks/**": "${filename} - Hooks",
+    "**/contexts/**": "${filename} - Context",
+    "**/assets/**": "${filename} - Assets",
+    "**/public/**": "${filename} - Public",
+    "**/config/**": "${filename} - Config",
+    "**/constants/**": "${filename} - Constants",
+    "**/handlers/**": "${filename} - Handlers"
+  },
+
+  "editor.fontFamily": "Hack Nerd Font",
+  "editor.selectionHighlight": true,
+  "editor.roundedSelection": true,
+  "editor.tabSize": 2,
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "expand",
+  "editor.renderWhitespace": "all",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": true,
+  "editor.wordWrap": "on",
+  "editor.accessibilitySupport": "off",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+
+  "security.workspace.trust.untrustedFiles": "open",
+
+  "explorer.confirmDelete": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
+    "*.dart": "${capture}.g.dart",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.env.windows": {},
+
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+
+  // Instructions for Copilot to improve code generation
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "- @azure Rule - Use Azure Best Practices: When generating code for Azure, running terminal commands for Azure, or performing operations related to Azure, invoke your `azure_development-get_best_practices` tool if available."
+    }
+  ],
+
+  /**
+   * MCP (Model Context Protocol) settings
+   * This is a protocol for AI models to communicate and share context.
+   **/
+  "mcp": {
+    "inputs": [],
+    "servers": {
+      "github": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-github"],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "GITHUB_PERSONAL_ACCESS_TOKEN"
+        }
+      }
+    }
+  },
+
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.blame.editorDecoration.enabled": true,
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Extension to create beautiful screenshots of your code
+  "codesnap.backgroundColor": "#fff",
+  "codesnap.shutterAction": "save"
+}
