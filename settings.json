@@ -9,22 +9,27 @@
   },
   // Custom Labels
   "workbench.editor.customLabels.patterns": {
-    "**/types/**": "${filename} - Types & Interfaces",
-    "**/components/**": "${filename} - Components",
-    "**/pages/**": "${filename} - Pages",
-    "**/styles/**": "${filename} - Styles",
-    "**/utils/**": "${filename} - Utils",
-    "**/services/**": "${filename} - Services ",
-    "**/hooks/**": "${filename} - Hooks",
-    "**/contexts/**": "${filename} - Context",
-    "**/assets/**": "${filename} - Assets",
-    "**/public/**": "${filename} - Public",
-    "**/config/**": "${filename} - Config",
-    "**/constants/**": "${filename} - Constants",
-    "**/handlers/**": "${filename} - Handlers"
+    "**/types/**": "${dirname}/${filename} - Types & Interfaces",
+    "**/components/**": "${dirname}/${filename} - Components",
+    "**/pages/**": "${dirname}/${filename} - Pages",
+    "**/utils/**": "${dirname}/${filename} - Utils",
+    "**/services/**": "${dirname}/${filename} - Services",
+    "**/hooks/**": "${dirname}/${filename} - Hooks",
+    "**/contexts/**": "${dirname}/${filename} - Context",
+    "**/assets/**": "${dirname}/${filename} - Assets",
+    "**/public/**": "${dirname}/${filename} - Public",
+    "**/config/**": "${dirname}/${filename} - Config",
+    "**/constants/**": "${dirname}/${filename} - Constants",
+    "**/handlers/**": "${dirname}/${filename} - Handlers",
+    "**/test/**": "${dirname}/${filename} - Tests"
   },
+  "workbench.editor.customLabels.enabled": true,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 16,
 
-  "editor.fontFamily": "Hack Nerd Font",
+  "symbols.hidesExplorerArrows": true, // Hide arrows in the explorer view to reduce clutter
+
+  "editor.fontFamily": "Hack Nerd Font Mono",
   "editor.selectionHighlight": true,
   "editor.roundedSelection": true,
   "editor.tabSize": 2,
@@ -40,7 +45,10 @@
 
   "security.workspace.trust.untrustedFiles": "open",
 
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": true,
   "explorer.confirmDelete": false,
+  "explorer.decorations.badges": false,
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
@@ -59,7 +67,7 @@
   },
 
   "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
   "terminal.integrated.env.windows": {},
 
   "github.copilot.nextEditSuggestions.enabled": true,
@@ -70,13 +78,6 @@
     "scminput": false
   },
 
-  // Instructions for Copilot to improve code generation
-  "github.copilot.chat.codeGeneration.instructions": [
-    {
-      "text": "- @azure Rule - Use Azure Best Practices: When generating code for Azure, running terminal commands for Azure, or performing operations related to Azure, invoke your `azure_development-get_best_practices` tool if available."
-    }
-  ],
-
   /**
    * MCP (Model Context Protocol) settings
    * This is a protocol for AI models to communicate and share context.
@@ -84,12 +85,13 @@
   "mcp": {
     "inputs": [],
     "servers": {
-      "github": {
+      "playwright": {
         "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-github"],
-        "env": {
-          "GITHUB_PERSONAL_ACCESS_TOKEN": "GITHUB_PERSONAL_ACCESS_TOKEN"
-        }
+        "args": ["@playwright/mcp@latest"]
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-filesystem", "\"E:\""]
       }
     }
   },
@@ -135,6 +137,11 @@
   },
 
   // Extension to create beautiful screenshots of your code
-  "codesnap.backgroundColor": "#fff",
-  "codesnap.shutterAction": "save"
+  "codesnap.backgroundColor": "#1E1E1E",
+  "codesnap.shutterAction": "save",
+  "codesnap.containerPadding": "2em",
+
+  // more extensions ...
+  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+  "@azure.argTenant": "805cd502-7f18-40aa-b276-2669e9f2e504"
 }
